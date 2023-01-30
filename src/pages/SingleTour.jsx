@@ -8,7 +8,7 @@ import moment from 'moment'
 import { Link } from 'react-router-dom'
 import Loader from '../components/Loader'
 import ReleatedTour from './ReleatedTour'
-import DisqusThread from './Disqus/DisqusThread'
+
 const SingleTour = () => {
   const {id}=useParams()
     const dispatch=useDispatch()
@@ -46,7 +46,7 @@ const SingleTour = () => {
              <ReleatedTour releatedtour={Releatedtours} tourId={id}/>
             </MDBCardBody>
         </MDBCard>
-        <DisqusThread id={id} title={tour.title} path={`tour/${id}`}/>
+       
         </MDBContainer>
     </>
   )

@@ -1,7 +1,7 @@
 {
   "name": "tourplaces",
   "version": "0.1.0",
-  "proxy": "https://tourapp-wv8m.onrender.com",
+  
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",
