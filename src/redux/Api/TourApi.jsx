@@ -1,5 +1,5 @@
 import axios from "axios";
-const API="http://tourapp-wv8m.onrender.com"
+const API="https://tourapp-wv8m.onrender.com"
 // create post
 export const CreateTour = async (TourData) => {
   const response = await axios.post(`${API}/api/posts/create`, TourData);

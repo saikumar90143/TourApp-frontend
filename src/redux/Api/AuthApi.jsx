@@ -1,5 +1,5 @@
 import axios from "axios";
-const API="http://tourapp-wv8m.onrender.com"
+const API="https://tourapp-wv8m.onrender.com"
 axios.interceptors.request.use((req) => {
   if (localStorage.getItem("user")) {
     req.headers.Authorization = `Bearer ${
