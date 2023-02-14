@@ -50,7 +50,7 @@ export const SearchByTitle=async(search)=>{
 // search by tag
 
 export const SearchBytag=async(tag)=>{
-  const response=await axios.get(`$/api/posts/searchtag/${tag}`)
+  const response=await axios.get(`/api/posts/searchtag/${tag}`)
   return response.data
 }
 
