@@ -1,5 +1,5 @@
 import axios from "axios";
-const API="http://localhost:8080"
+const API="https://tourapp-wv8m.onrender.com"
 axios.interceptors.request.use((req) => {
   if (localStorage.getItem("user")) {
     req.headers.Authorization = `Bearer ${
@@ -11,7 +11,7 @@ axios.interceptors.request.use((req) => {
 });
 
 const SignIn = async (formData) => {
-  const response = await axios.post(`/users/signin`, formData);
+  const response = await axios.post(`${API}/users/signin`, formData);
 
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
@@ -22,7 +22,7 @@ const SignIn = async (formData) => {
 // signup
 
 const SingUp = async (formData) => {
-  const response = await axios.post(`/users/signup`, formData);
+  const response = await axios.post(`${API}/users/signup`, formData);
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
   }
@@ -31,7 +31,7 @@ const SingUp = async (formData) => {
 // google signin
 
 const GoogleSignin = async (user) => {
-  const response = await axios.post(`users/googlesignin`, user);
+  const response = await axios.post(`${API}users/googlesignin`, user);
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
   }

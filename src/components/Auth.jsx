@@ -93,12 +93,10 @@ const Auth = () => {
 
   const handleSuccess = async (res) => {
     console.log("res: ", res);
-    const email = res?.profileObj?.email;
-    const name = res?.profileObj.name;
-    const googleid = res?.profileObj?.googleid;
-    const image = res?.profileObj?.imageUrl;
+    const {email,name,googleid,imageUrl}=res?.profileObj
+    
     const token = res?.tokenId;
-    const result = { name, email, googleid, image, token };
+    const result = { name, email, googleid, imageUrl, token };
     dispatch(GoogleSignIn(result));
   };
 
